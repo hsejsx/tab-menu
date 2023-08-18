@@ -1,0 +1,80 @@
+:root {
+  --color-primary: #602d96;
+  --color-disabled: #f1f0f1;
+  --color-white: #fff;
+  --color-border: #dededf;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 30rem;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+/* UI */
+
+.library input {
+  display: none;
+}
+
+.library input[id='tab1']:checked ~ .library-btns label[for='tab1'],
+.library input[id='tab2']:checked ~ .library-btns label[for='tab2'],
+.library input[id='tab3']:checked ~ .library-btns label[for='tab3'] {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.library input[id='tab1']:checked ~ .library-content .table:nth-child(1),
+.library input[id='tab2']:checked ~ .library-content .table:nth-child(2),
+.library input[id='tab3']:checked ~ .library-content .table:nth-child(3) {
+  display: table;
+}
+
+.library-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.library-btns label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--color-disabled);
+}
+
+.table {
+  display: none;
+  width: 140rem;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th,
+.table td {
+  width: 3%;
+  padding: 0.8rem;
+}
+
+.table .info {
+  width: 20%;
+}
+
+.table td:nth-child(3):hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}

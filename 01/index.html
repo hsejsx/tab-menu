@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 서재</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="library">
+      <input id="tab1" type="radio" name="tab" checked />
+      <input id="tab2" type="radio" name="tab" />
+      <input id="tab3" type="radio" name="tab" />
+
+      <div class="library-btns">
+        <label for="tab1">대출현황</label>
+        <label for="tab2">대출이력</label>
+        <label for="tab3">예약현황</label>
+      </div>
+
+      <div class="library-content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">구분</th>
+              <th class="info" scope="col">도서정보</th>
+              <th scope="col">대출일</th>
+              <th scope="col">반납예정일</th>
+              <th scope="col">소장도서관</th>
+              <th scope="col">연체일</th>
+              <th scope="col">상태</th>
+              <th scope="col">반납연기</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td>습관의 디테일: 위대한 변화를 만드는 사소한 행동 설계</td>
+              <td>2023/08/09</td>
+              <td>2023/08/30</td>
+              <td>영종하늘</td>
+              <td>0</td>
+              <td>반납연기</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td></td>
+              <td>나의 첫 불렛저널</td>
+              <td>2023/08/09</td>
+              <td>2023/08/30</td>
+              <td>영종하늘</td>
+              <td>0</td>
+              <td>반납연기</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td></td>
+              <td>
+                왜 아가리로만 할까?: 오늘도, 해야지 해야지 하며 하루를 보낸
+                당신에게
+              </td>
+              <td>2023/08/09</td>
+              <td>2023/08/30</td>
+              <td>영종하늘</td>
+              <td>0</td>
+              <td>반납연기</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">구분</th>
+              <th class="info" scope="col">도서정보</th>
+              <th scope="col">대출일</th>
+              <th scope="col">반납일</th>
+              <th scope="col">소장도서관</th>
+              <th scope="col">상태</th>
+              <th scope="col">연체</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td>(超譯)니체의 말</td>
+              <td>2023/07/17</td>
+              <td>2023/08/07</td>
+              <td>영종하늘</td>
+              <td>반납</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td></td>
+              <td>(超譯)니체의 말. 2</td>
+              <td>2023/07/17</td>
+              <td>2023/08/07</td>
+              <td>영종하늘</td>
+              <td>반납</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th class="info" scope="col">도서정보</th>
+              <th scope="col">예약일</th>
+              <th scope="col">예약만기일</th>
+              <th scope="col">소장도서관</th>
+              <th scope="col">예약상태</th>
+              <th scope="col">순위</th>
+              <th scope="col">예약취소</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
