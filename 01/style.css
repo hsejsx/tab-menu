@@ -15,6 +15,7 @@ body {
   padding: 30rem;
   font-size: 1.6rem;
   overflow: hidden;
+  background-color: var(--color-white);
 }
 
 /* UI */
