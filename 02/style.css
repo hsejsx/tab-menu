@@ -1,0 +1,178 @@
+:root {
+  --color-disabled: #abb0b5;
+  --color-active: #1b1c1d;
+  --color-primary: #03c472;
+  --color-btn: #f8f8fb;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 0;
+  margin: 0;
+  font-family: 'Pretendard-Regular';
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+/* UI */
+
+.study {
+  width: 1200px;
+}
+
+.category-btns {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--color-disabled);
+}
+
+.category-btns label {
+  padding: 4px 8px;
+  margin-right: 8px;
+  color: var(--color-disabled);
+  border-bottom: 2px solid transparent;
+}
+
+.category-btns label:hover {
+  color: var(--color-active);
+}
+
+.study > input[id='category1']:checked ~ .category-btns label[for='category1'],
+.study > input[id='category2']:checked ~ .category-btns label[for='category2'] {
+  color: var(--color-active);
+  border-color: var(--color-active);
+}
+
+.study
+  > input[id='category1']:checked
+  ~ .category-content
+  .category-item:nth-child(1),
+.study
+  > input[id='category2']:checked
+  ~ .category-content
+  .category-item:nth-child(2) {
+  display: block;
+}
+
+.category-item {
+  display: none;
+}
+
+.category-item input[id='on']:checked ~ .course-btns label[for='on'],
+.category-item input[id='off']:checked ~ .course-btns label[for='off'],
+.category-item input[id='run']:checked ~ .course-btns label[for='run'],
+.category-item
+  input[id='complete']:checked
+  ~ .course-btns
+  label[for='complete'] {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.category-item
+  input[id='run']:checked
+  ~ .course-list
+  .course-item[data-state='run'],
+.category-item
+  input[id='complete']:checked
+  ~ .course-list
+  .course-item[data-state='complete'] {
+  display: block;
+}
+
+.course-btns {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.course-btns label {
+  padding: 6px 8px;
+  border: 1px solid var(--color-disabled);
+  border-radius: 1000px;
+  margin-right: 8px;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.course-item {
+  display: none;
+}
+
+.card {
+  display: block;
+}
+
+.card-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  display: block;
+  padding: 16px 0;
+}
+
+.folder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.folder .header {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.btn-new {
+  padding: 6px 12px;
+  background-color: var(--color-btn);
+  border: 1px solid var(--color-disabled);
+  border-radius: 1000px;
+}
+
+.folder-empty strong {
+  display: inline-block;
+  margin-bottom: 8px;
+}

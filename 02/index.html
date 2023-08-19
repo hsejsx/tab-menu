@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인프런 내 학습</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="study">
+      <input id="category1" type="radio" name="category" checked />
+      <input id="category2" type="radio" name="category" />
+      <div class="category-btns">
+        <label for="category1">보유한 강의</label>
+        <label for="category2">내 강의폴더</label>
+      </div>
+      <div class="category-content">
+        <div class="category-item">
+          <input id="run" type="radio" name="state" checked />
+          <input id="complete" type="radio" name="state" />
+          <div class="course-btns">
+            <label for="run">학습중</label>
+            <label for="complete">완강</label>
+          </div>
+          <ul class="course-list">
+            <li class="course-item" data-state="complete">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/flex.jpg"
+                    alt="CSS Flex와 Grid 제대로 익히기"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >CSS Flex와 Grid 제대로 익히기</strong
+                >
+              </a>
+            </li>
+            <li class="course-item" data-state="complete">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/animations.gif"
+                    alt="웹 애니메이션의 새로운 표준, Web Animations API"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >웹 애니메이션의 새로운 표준, Web Animations API</strong
+                >
+              </a>
+            </li>
+            <li class="course-item" data-state="run">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/gpt.png"
+                    alt="ChatGPT AI챗봇의 기본 활용법"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >ChatGPT AI챗봇의 기본 활용법</strong
+                >
+              </a>
+            </li>
+            <li class="course-item" data-state="run">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/three.png"
+                    alt="three.js로 시작하는 3D 인터랙티브 웹"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >three.js로 시작하는 3D 인터랙티브 웹</strong
+                >
+              </a>
+            </li>
+            <li class="course-item" data-state="run">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/apple.gif"
+                    alt="애플 웹사이트 인터랙션 클론!"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >애플 웹사이트 인터랙션 클론!</strong
+                >
+              </a>
+            </li>
+            <li class="course-item" data-state="run">
+              <a class="card" href="#none">
+                <div class="card-img">
+                  <img
+                    src="./images/bbc.jpg"
+                    alt="BBC 인터랙티브 페이지 코로나19가 바꿀 사무실의 미래 클론"
+                  />
+                </div>
+                <strong class="card-title" aria-hidden="true"
+                  >BBC 인터랙티브 페이지 "코로나19가 바꿀 사무실의 미래"
+                  클론</strong
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="category-item">
+          <div class="folder">
+            <div class="header">
+              <button class="btn-new" type="button">새 폴더 만들기</button>
+            </div>
+            <p class="folder-empty">
+              <strong>강의폴더가 없습니다.</strong><br />
+              나만의 강의폴더를 만들어보세요!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
