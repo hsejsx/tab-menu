@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>짱구는 못말려 명대사</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="card">
+      <h1 class="card-title">짱구는 못말려 명대사</h1>
+      <div class="characters">
+        <img class="active img-top" src="./images/zzanggu.jpg" alt="짱구" />
+        <img src="./images/sinhyeongman.jpg" alt="신형만" />
+        <img class="img-top" src="./images/bongmiseon.jpg" alt="봉미선" />
+        <img src="./images/macao-zoma.jpg" alt="마카오, 조마" />
+      </div>
+      <div class="scripts">
+        <p class="script" data-name="짱구">
+          큰 사람이 될게요.<br />
+          아까 그 초대형 로봇보다 훨씬 더 큰 사람이 될 거예요!<br />
+          <cite>짱구</cite>
+        </p>
+        <p class="script" data-name="신형만">
+          꿈은 도망가지 않아<br />
+          도망가는 것은 언제나 나 자신이지<br />
+          <cite>신형만</cite>
+        </p>
+        <p class="script" data-name="봉미선">
+          좋아서 미움받는 역할을 하는 게 아니야<br />
+          미움받아도 좋으니까 내 아이를 지키고 싶은 것뿐이야!<br />
+          너희 같은 애들은 잘 모르겠지만,<br />
+          그게 바로 엄마라는 존재인 거야<br />
+          <cite>봉미선</cite>
+        </p>
+        <p class="script" data-name="마카오, 조마">
+          얘야, 인생이란 원래 자기 생각대로 되지 않는 법이란다.<br />
+          그래서 인생이 재밌는 거 아니겠어?<br />
+          <cite>중성마녀 마카오, 조마</cite>
+        </p>
+      </div>
+    </section>
+
+    <script>
+      $('.script').hide().eq(0).show();
+      $('.characters img').click(function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+
+        const script = $(`.script[data-name='${$(this).attr('alt')}']`);
+        script.fadeIn();
+        script.siblings().fadeOut();
+      });
+    </script>
+  </body>
+</html>
